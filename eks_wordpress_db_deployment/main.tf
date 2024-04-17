@@ -44,7 +44,7 @@ resource "kubernetes_secret" "wordpress_db_secret" {
     }
     
 }
-/*
+
 resource "kubernetes_persistent_volume" "wp_db_persistent_volume" {
   metadata {
     name = "mysql-pv"
@@ -90,7 +90,7 @@ resource "kubernetes_persistent_volume_claim" "wp_db_persistent_volume_claim" {
     volume_name = "${kubernetes_persistent_volume.wp_db_persistent_volume.metadata.0.name}"
   }
 }
-*/
+
 resource "kubernetes_deployment" "wordpress_db" {
   metadata {
     name      = "wp-db-deployment"
