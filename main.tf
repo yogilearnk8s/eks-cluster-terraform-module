@@ -70,7 +70,8 @@ resource "aws_subnet" "public-subnets" {
   tags = {
     Name = "Public-k8s-subnet"
   }
-    availability_zone = "${data.aws_availability_zones.yogi-az.names[count.index]}"
+    #availability_zone = "${data.aws_availability_zones.yogi-az.names[count.index]}"
+    availability_zone = "ap-south-1a"
   map_public_ip_on_launch = true
 }
 
